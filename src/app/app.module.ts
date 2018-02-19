@@ -1,5 +1,5 @@
-import { CursosModule } from './cursos/cursos/cursos.module';
-import { CursosComponent } from './cursos/cursos/cursos.component';
+import { CursosModule } from './cursos/cursos.module';
+import { CursosComponent } from './cursos/cursos.component'
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 

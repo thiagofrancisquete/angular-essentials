@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit
+} from '@angular/core';
 
 @Component({
   selector: 'app-cursos',
@@ -7,18 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CursosComponent implements OnInit {
 
-  nomePortal:string;
+  nomePortal: string;
 
-  cursos : string[] = ['Java', 'ExtJs', 'Angular']
+  cursos: string[] = ['Java', 'ExtJs', 'Angular'];
 
   constructor() {
-   this.nomePortal = 'http:loiane.training';
-  
-   for (let i=0; i<this.cursos.length; i++){
-     let curso = this.cursos[i];
+    this.nomePortal = 'http:loiane.training';
+    for (let i = 0; i < this.cursos.length; i++) {
+      const curso = this.cursos[i];
     }
   }
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

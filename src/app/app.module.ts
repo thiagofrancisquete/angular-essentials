@@ -1,16 +1,18 @@
-import { MeuFormModule } from './meu-form/meu-form.module';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
-import { MeuPrimeiro2Component } from './meu-primeiro2/meu-primeiro2.component';
-import { CursosModule } from './cursos/cursos.module';
-import { DataBindingComponent } from './data-binding/data-binding.component';
-import { InputPropertyComponent } from './input-property/input-property.component';
-import { OutputPropertyComponent } from './output-property/output-property.component';
-import { CicloComponent } from './ciclo/ciclo.component';
+import { OutputPropertyComponent } from './iniciais/output-property/output-property.component';
+import { MeuPrimeiroComponent } from './iniciais/meu-primeiro/meu-primeiro.component';
+import { MeuPrimeiro2Component } from './iniciais/meu-primeiro2/meu-primeiro2.component';
+import { DataBindingComponent } from './iniciais/data-binding/data-binding.component';
+import { InputPropertyComponent } from './iniciais/input-property/input-property.component';
+import { CicloComponent } from './iniciais/ciclo/ciclo.component';
+import { CursosModule } from './iniciais/cursos/cursos.module';
+import { MeuFormModule } from './iniciais/meu-form/meu-form.module';
+import { MateriasComponent } from './servicos/materias/materias.component';
+import { MateriasService } from './servicos/materias/materias.service';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { CicloComponent } from './ciclo/ciclo.component';
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
+    MateriasComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +31,7 @@ import { CicloComponent } from './ciclo/ciclo.component';
     FormsModule,
     MeuFormModule
   ],
-  providers: [],
+  providers: [MateriasService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

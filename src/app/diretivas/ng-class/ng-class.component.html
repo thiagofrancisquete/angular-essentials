@@ -5,12 +5,12 @@
   (click)="onClick()"
   ></i>
   <br>
+  <!-- usando ngClass -->
   <i class="glyphicon"
   [ngClass]="{
     'glyphicon-star-empty': !meuFavorito,
     'glyphicon-star': meuFavorito
   }"
   (click)="onClick()"
-  >
-  </i>
+  ></i>
 </h1>

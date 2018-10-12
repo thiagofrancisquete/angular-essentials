@@ -10,10 +10,10 @@ export class NgClassComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  onClick() {
+    this.meuFavorito = !this.meuFavorito;
   }
 
-  onClick() {
-   this.meuFavorito = !this.meuFavorito;
+  ngOnInit() {
   }
 }

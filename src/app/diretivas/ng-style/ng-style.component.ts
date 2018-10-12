@@ -6,15 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./ng-style.component.css']
 })
 export class NgStyleComponent implements OnInit {
-
   ativo: boolean = false;
-  tamanhoFonte: number = 10;
+  tamanhoFonte: number = 20;
   constructor() { }
 
   ngOnInit() {
   }
 
-  clicado() {
+  mudarAtivo() {
     this.ativo = !this.ativo;
   }
 

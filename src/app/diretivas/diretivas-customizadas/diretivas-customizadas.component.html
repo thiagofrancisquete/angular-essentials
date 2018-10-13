@@ -1,3 +1,21 @@
-<p fundoAmarelo> texto com fundo amarelo</p>
-<p highlightMouse> texto com highlight no hover do mouse </p>
-<p [highlight]="'tomato'" [defaultColor]="'lightgreen'"> texto com highlight com cores customizadas </p> 
+<!--
+  <p fundoAmarelo> texto com fundo amarelo</p>
+  <button fundoAmarelo>nao é pra colorir</button>
+  <p highlightMouse> texto com highlight no hover do mouse </p>
+  <p highlight [defaultColor]=""> texto com highlight com cores customizadas </p> 
+-->
+
+<h1>Diretiva Estrutura customizada - ngElse</h1>
+
+<div *ngIf="mostrarCursos">
+  Lista de cursos aqui
+</div>
+
+<template [ngElse]="mostrarCursos">
+  <div>Nao existem cursos para serem listados</div>
+</template>
+
+<br>
+<button (click)="onMostrarCursos()">
+  Mostrar ou esconder cursos
+</button>

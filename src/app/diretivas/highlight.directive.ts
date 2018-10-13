@@ -6,22 +6,22 @@ import { Directive, HostBinding, HostListener, Input } from '@angular/core';
 export class HighlightDirective {
 
   @HostListener('mouseenter') onmouseover() {
-    this.backg = this.defaultColor;
+    this.bckg = this.highlightColor;
   }
 
   @HostListener('mouseleave') onmouseleave() {
-    this.backg = this.highlightColor;
+    this.bckg = this.defaultColor;
   }
+  
+  @HostBinding('style.backgroundColor') bckg: string;
 
-  @HostBinding('style.backgroundColor') backg: string;
-
-  @Input() defaultColor: string = 'lightgreen';
-  @Input('highlight') highlightColor: string = 'tomato';
-
+  @Input() defaultColor: string = 'teal'
+  @Input() highlightColor: string = 'tomato'
+  
   constructor() { }
 
   ngOnInit() {
-    this.backg = this.defaultColor;
-  }
+    this.bckg = this.defaultColor;
+  }  
 
 }

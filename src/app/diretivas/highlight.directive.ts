@@ -16,7 +16,7 @@ export class HighlightDirective {
   @HostBinding('style.backgroundColor') bckg: string;
 
   @Input() defaultColor: string = 'teal'
-  @Input() highlightColor: string = 'tomato'
+  @Input('highlight') highlightColor: string = 'tomato'
   
   constructor() { }
 

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
@@ -11,8 +12,10 @@ import { InputPropertyComponent } from './iniciais/input-property/input-property
 import { CicloComponent } from './iniciais/ciclo/ciclo.component';
 import { CursosModule } from './iniciais/cursos/cursos.module';
 import { MeuFormModule } from './iniciais/meu-form/meu-form.module';
-import { MateriasComponent } from './servicos/materias/materias.component';
-import { MateriasService } from './servicos/materias/materias.service';
+import { HighlightDirective } from './diretivas/highlight.directive';
+import { HighlightMouseDirective } from './diretivas/highlight-mouse.directive';
+import { DiretivasCustomizadasComponent } from './diretivas/diretivas-customizadas/diretivas-customizadas.component';
+
 
 @NgModule({
   declarations: [
@@ -23,15 +26,18 @@ import { MateriasService } from './servicos/materias/materias.service';
     InputPropertyComponent,
     OutputPropertyComponent,
     CicloComponent,
-    MateriasComponent,
+    HighlightDirective,
+    HighlightMouseDirective,
+    DiretivasCustomizadasComponent
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     CursosModule,
     FormsModule,
     MeuFormModule
   ],
-  providers: [MateriasService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -7,15 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cursos.component.css']
 })
 export class CursosComponent implements OnInit {
+  
   nomePortal: string;
 
   cursos: string[];
+  
   constructor(private cursosService: CursosService) {
     this.nomePortal = 'http://loiane.training';
 
-    this.cursos = this.cursosService.getCursos();
+    //this.cursos = this.cursosService.getCursos();
   }
-
+  
   ngOnInit() {
+    this.cursos = this.cursosService.getCursos();
+
+    this.cursosService.emitirCursoCriado.subscribe(
+     
+    curso => console.log(curso)
+      
+    );
   }
 }

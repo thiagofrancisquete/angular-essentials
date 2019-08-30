@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CursosComponent } from './cursos.component';
 import { CriarCursoComponent } from './criar-curso/criar-curso.component';
 import { CursosService } from './cursos.service';
+import { ReceberCursoCriadoComponent } from './receber-curso-criado/receber-curso-criado.component';
 
 @NgModule({
   imports: [
@@ -10,7 +11,8 @@ import { CursosService } from './cursos.service';
   ],
   declarations: [
     CursosComponent,
-    CriarCursoComponent
+    CriarCursoComponent,
+    ReceberCursoCriadoComponent
   ],
   exports: [
     CursosComponent
